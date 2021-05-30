@@ -14,6 +14,7 @@ import { Cross } from "../select-panel/cross";
 import { Arrow } from "./arrow";
 import { DropdownHeader } from "./header";
 import { Loading } from "./loading";
+import clsx from "clsx";
 
 const Dropdown = () => {
   const {
@@ -25,6 +26,7 @@ const Dropdown = () => {
     disabled,
     onChange,
     labelledBy,
+    dropdownTitle,
     value,
     isOpen,
     defaultIsOpen,
@@ -100,10 +102,10 @@ const Dropdown = () => {
     isInternalExpand && setExpanded(false);
   };
 
-  return (
+  return (  
     <div
       tabIndex={0}
-      className="dropdown-container"
+      className={clsx("dropdown-container", {"dropdown-container-no-title": !dropdownTitle})}
       aria-labelledby={labelledBy}
       aria-expanded={expanded}
       aria-readonly={true}
@@ -114,6 +116,13 @@ const Dropdown = () => {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
+      {dropdownTitle && 
+        <fieldset className={clsx("dropdown-legend", {"dropdown-legend-with-title": dropdownTitle})}>
+          <legend>
+            <span className="dropdown-legend-title">{dropdownTitle}</span>
+          </legend>
+        </fieldset>
+      }
       <div className="dropdown-heading" onClick={toggleExpanded}>
         <div className="dropdown-heading-value">
           <DropdownHeader />

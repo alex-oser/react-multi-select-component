@@ -16,6 +16,7 @@ export const ExampleDefault = () => {
     <div>
       <pre>{JSON.stringify(selected)}</pre>
       <MultiSelect
+        dropdownTitle="Select fruit(s)"
         options={options}
         hasSelectAll={boolean("hasSelectAll", true)}
         isLoading={boolean("isLoading", false)}

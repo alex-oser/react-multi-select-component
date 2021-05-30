@@ -33,4 +33,5 @@ export interface ISelectProps {
   ClearSelectedIcon?: ReactNode;
   defaultIsOpen?: boolean;
   isOpen?: boolean;
+  dropdownTitle?: string;
 }

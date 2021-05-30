@@ -66,6 +66,7 @@ export default Example;
 | Prop                  | Description                                                           | Type                         | Default        |
 | --------------------- | --------------------------------------------------------------------- | ---------------------------- | -------------- |
 | `labelledBy`          | value for `aria-labelledby`                                           | `string`                     |                |
+| `dropdownTitle`       | title for dropdown component                                          | `string`                     |                |
 | `options`             | options for dropdown                                                  | `[{label, value, disabled}]` |                |
 | `value`               | pre-selected rows                                                     | `[{label, value}]`           | `[]`           |
 | `hasSelectAll`        | toggle 'Select All' option                                            | `boolean`                    | `true`         |

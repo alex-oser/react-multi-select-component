@@ -38,18 +38,41 @@
   position: relative;
   outline: 0;
   background-color: var(--rmsc-bg);
-  border: 1px solid var(--rmsc-border);
+  border-color: var(--rmsc-border);
   border-radius: var(--rmsc-radius);
 }
 
+.rmsc .dropdown-container-no-title {
+  border: 1px solid var(--rmsc-border);
+}
+
 .rmsc .dropdown-container:focus-within {
-  box-shadow: var(--rmsc-main) 0 0 0 1px;
   border-color: var(--rmsc-main);
+}
+
+.rmsc .dropdown-legend {
+  position: absolute;
+  border: 1px solid;
+  border-color: inherit;
+  border-radius: var(--rmsc-radius);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.rmsc .dropdown-legend-with-title {
+  top: -9px;
+}
+
+.rmsc .dropdown-legend-title {
+  font-size: 0.75em;
+  color: var(--rmsc-gray);
 }
 
 .rmsc .dropdown-heading {
   position: relative;
-  padding: 0 var(--rmsc-p);
+  padding: 8px var(--rmsc-p);
   display: flex;
   align-items: center;
   width: 100%;
